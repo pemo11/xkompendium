@@ -1,15 +1,15 @@
-﻿// File: Dateien.prg
+﻿// File: FileExamples.prg
 
 Using System
 Using System.IO
 Using System.Threading
 
-Begin Namespace XSharpAllgemein
+Begin Namespace XKompendium
 
 	/// <summary>
-    /// The Dateien class
+    /// The FileExamples class
     /// </summary>
-	Class Dateien
+	Class FileExamples
 
         Private Static Method GenerateText() As String
             Local tmpText := "" As String

@@ -3,7 +3,7 @@
 Using System
 Using System.IO
 
-Begin Namespace XSharpAllgemein
+Begin Namespace XKompendium
 
 	/// <summary>
     /// The Schleifen class.

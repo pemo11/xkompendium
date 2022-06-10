@@ -1,15 +1,18 @@
-﻿// ArrayBeispiele.prg
+﻿// ArrayExamples1.prg
 
 Using System
 Using System.Data
 Using System.IO
 Using System.Linq
 
-Begin Namespace XSharpAllgemein
+Begin Namespace XKompendium
 
-	Static Class ArrayBeispiele
+    /// <summary>
+    /// Examples for handling Arrays (part 1)
+    /// </summary>
+	Static Class ArrayExamples1
 
-        Private Delegate SearchDel(i as int) As Boolean
+        Private Delegate SearchDel(i As Int) As Boolean
 
         Static Method DataTablePerIndexDurchlaufen() As Void
             Local ta := DataTable{"Test"} As DataTable

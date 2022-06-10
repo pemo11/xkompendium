@@ -1,12 +1,12 @@
-﻿// StringBeispiele.prg
+﻿// File: StringExamples.prg
 
 Using System
 Using System.IO
 Using System.Linq
 
-Begin Namespace XSharpAllgemein
+Begin Namespace XKompendium
 
-	Static Class StringBeispiele
+	Static Class StringExamples
 
         Static Method SubstringVsSubstr1() As Void
             Local strText := "NNNJNN" As String

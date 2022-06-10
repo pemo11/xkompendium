@@ -1,13 +1,13 @@
-﻿// File: LINGGroup.prg
+﻿// File: LINQGroupExamples.prg
 
 
 Using System
 Using System.Data
 Using System.Linq
 
-Begin Namespace XSharpAllgemein
+Begin Namespace XKompendium
 
-    Public Static Class LINQGroupBeispiele
+    Public Static Class LINQGroupExamples
         
         // Gruppieren einer DataTable
         Static Method DataTableGroup() As Void

@@ -1,9 +1,9 @@
-﻿// ForEachBeispiele.prg
+﻿// ForEachExamples.prg
 
 Using System
 Using System.Collections.Generic
 
-Begin Namespace XSharpAllgemein
+Begin Namespace XKompendium
 
     Class Control
         Export Name As String

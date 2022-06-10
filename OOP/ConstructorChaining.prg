@@ -1,36 +1,35 @@
 ﻿// File: ConstructorChaining.prg
 
+Using System
+Using System.Collections.Generic
+Using System.Text
 
-USING System
-USING System.Collections.Generic
-USING System.Text
+Begin Namespace XKompendium
 
-BEGIN NAMESPACE XSharpAllgemein
-
-	/// <summary>
+    /// <summary>
     /// The ConstructorChaining class.
     /// </summary>
-	CLASS ConstructorChaining
+    Class ConstructorChaining
         Private y As Int
         
-        CONSTRUCTOR()
+        Constructor()
             ? "Constructor A"
             y := 1000
-             RETURN
+            Return
 
-        CONSTRUCTOR(x As Int)
+        Constructor(x As Int)
             Self()
             ? i"Constructor B mit x={x} und y={Self:y}"
-             RETURN
+            Return
 
     End Class
     
     Public Static Class ConstructorChainingTest
     
         Public Static Method Test() As Void
-            var c1 := ConstructorChaining{1234} 
+            Var c1 := ConstructorChaining{1234} 
             Return
             
     End Class
     
-End Namespace // XSharpAllgemein
+End Namespace

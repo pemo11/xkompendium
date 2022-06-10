@@ -2,27 +2,39 @@
 
 Using System
 
-BEGIN NAMESPACE XSharpAllgemein
+Begin Namespace XKompendium
 
 	/// <summary>
-    /// The ClassDefinition class.
+    /// Definition of the Document class
     /// </summary>
-	Class Dokument
-        Private strTitel As String
-        
+	Class Document
+        Private _Id As Int
+        Private _Titel As String
+
         Property Titel As String
             Get
-                Return Self.strTitel
+                Return Self._Titel
             End Get
-            Set 
-                Self.strTitel := Value
+            Set
+                Self._Titel := Value
             End Set
         End Property
- 
-    CONSTRUCTOR()
-         RETURN
+
+        Property Id As Int
+            Get
+                Return Self._Id
+            End Get
+            Set
+                Self._Id := Value
+            End Set
+        End Property
+
+        Constructor(Id As Int, Titel As String) As Void
+            Self._Id := Id
+            Self._Titel := Titel
+            Return
 
     End Class
-    
-   
-END NAMESPACE // XSharpAllgemein
+
+
+END Namespace

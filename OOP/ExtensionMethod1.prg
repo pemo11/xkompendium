@@ -6,7 +6,7 @@
 
 Using System
 
-Begin Namespace XSharpAllgemein
+Begin Namespace XKompendium
 
 	Class ExtensionMethods1
 

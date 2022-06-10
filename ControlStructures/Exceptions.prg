@@ -1,13 +1,14 @@
 ﻿// File: Exceptions.prg
+
 Using System
 Using System.Data.SqlClient
 
-Begin Namespace XSharpAllgemein
+Begin Namespace XKompendium
 
-	Static Class ExceptionBeispiele
+	Static Class ExceptionExamples
 
         Static Method ExceptionBeispiel1() As Void
-            Try 
+            Try
                 // Exception auslösen
                 Throw Exception{"Feieralarm!"}
             // Wichtig: SystemException fängt keine Exceptions
@@ -17,11 +18,11 @@ Begin Namespace XSharpAllgemein
                 Console.WriteLine(i"Exception: {ex}")
             End Try
             Return
-        
+
         Static Method MockSqlExection() As SQLException
             Local sqlEx As SqlException
             Try
-                Var cn := SqlConnection{"Data Source=.;Database=GUARANTEED_TO_FAIL;Connection Timeout=1"} 
+                Var cn := SqlConnection{"Data Source=.;Database=GUARANTEED_TO_FAIL;Connection Timeout=1"}
                 cn:Open()
             Catch Ex As SqlException
                 sqlEx := ex
@@ -29,7 +30,7 @@ Begin Namespace XSharpAllgemein
             Return sqlEx
 
         Static Method ExceptionBeispiel2() As Void
-            Try 
+            Try
                 // SqlException weiterreichen
                 Throw MockSqlExection()
             // Wichtig: SystemException fängt eine SqlException

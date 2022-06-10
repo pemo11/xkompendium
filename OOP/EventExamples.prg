@@ -2,9 +2,9 @@
 Using System
 Using System.Timers
 
-Begin Namespace XSharpAllgemein
+Begin Namespace XKompendium
 
-	Static Class EventsBeispiele
+	Static Class EventExamples
 
         Static Method StartEvent1() As Void
             // Timer-Event starten

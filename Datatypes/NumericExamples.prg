@@ -1,11 +1,13 @@
-﻿Using System
+﻿// file: NumericExamples.prg
 
-Begin Namespace XSharpAllgemein
+Using System
+
+Begin Namespace XKompendium
 
 	/// <summary>
-    /// The NumericBeispiele class
+    /// The NumericExamples class
     /// </summary>
-	Class NumericBeispiele
+	Class NumericExamples
 
         Public Static Method Precision01() As Void
             Local f1 := 52.325 As Float

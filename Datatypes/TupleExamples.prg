@@ -1,11 +1,11 @@
-﻿// File: TupelBeispiel.prg
+﻿// File: TupleExamples.prg
 
 Using System
 Using System.Collections.Generic
 
-Begin Namespace XSharpAllgemein
+Begin Namespace XKompendium
 
-	Static Class TupelBeispiel
+	Static Class TupleExamples
 
         // Geht nicht???
         /*

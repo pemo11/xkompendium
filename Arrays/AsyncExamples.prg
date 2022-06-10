@@ -1,8 +1,8 @@
-﻿// File: AsyncBeispiele.prg
+﻿// File: AsyncExamples.prg
 
 Using System
 
-Begin Namespace XSharpAllgemein
+Begin Namespace XKompendium
 
 	Public Static Class AsyncBeispiele
     

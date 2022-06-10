@@ -1,19 +1,19 @@
-﻿// File: DictionaryBeispiele.prg
+﻿// File: DictionaryExamples.prg
 
-USING System
-USING System.Collections.Generic
+Using System
+Using System.Collections.Generic
 
-Begin Namespace XSharpAllgemein
+Begin Namespace XKompendium
 
-      
+
 	/// <summary>
     /// The DictionaryBeispiele class.
     /// </summary>
-	Public Class DictionaryBeispiele
-    
+	Public Class DictionaryExamples
+
         Constructor()
             Return
-            
+
         Public Static Method DictionaryBeispiel1() As Void
             Local dicStaedte := Dictionary<String, StadtInfo>{} As Dictionary<String, StadtInfo>
             dicStaedte:Add("ES", StadtInfo{"Esslingen", 89000})

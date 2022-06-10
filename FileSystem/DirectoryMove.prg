@@ -4,7 +4,7 @@ Using System
 Using System.IO
 Using System.Linq
 
-Begin Namespace XSharpAllgemein
+Begin Namespace XKompendium
 
 	Class DirectoryMove
 

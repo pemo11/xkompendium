@@ -1,10 +1,14 @@
-﻿// File: AScanBeispiele.prg
+﻿// File: AScanExamples.prg
 
 Using System
 
-Begin Namespace XSharpAllgemein
+Begin Namespace XKompendium
 
-	Public Static Class AScanBeispiele
+    /// <summary>
+    /// Examples for using AScan
+    /// </summary>
+	Public Static Class AScanExamples
+
 
         Public Static Method AScan1() As Void
             Local aSachgebiete := {"SG01","SG02  ", "SG03"} As Array
@@ -25,6 +29,7 @@ Begin Namespace XSharpAllgemein
                 ? "*** Sachgebiet wurde nicht gefunden ***"
             Endif
             Return
+            
     End Class
 
 End Namespace

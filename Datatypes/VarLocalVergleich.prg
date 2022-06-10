@@ -2,12 +2,12 @@
 
 #define lCore
 
-USING System
-USING System.Collections.Generic
-USING System.Text
+Using System
+Using System.Collections.Generic
+Using System.Text
 Using System.Data
 
-Begin Namespace XSharpAllgemein
+Begin Namespace XKompendium
 
 	Public Static Class VarLocalVergleich
     

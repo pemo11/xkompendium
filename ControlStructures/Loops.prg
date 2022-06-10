@@ -1,13 +1,13 @@
-﻿// Schleifen.prg
+﻿// Loops.prg
 
 Using System
 
-Begin Namespace XSharpAllgemein
+Begin Namespace XKompendium
 
 	/// <summary>
     /// The Schleifen class.
     /// </summary>
-	Public Class Schleifen
+	Public Class Loops
 
         Static Method For1() As  Void
             For Local i := 0 Upto 10

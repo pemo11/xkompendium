@@ -1,11 +1,12 @@
-﻿// DatumBeispiele.prg
+﻿// File: DateExamples.prg
+
 #define lCore
 
 Using System
 
-Begin Namespace XSharpAllgemein
+Begin Namespace XKompendium
 
-    Public Static Class DatumsBeispiele
+    Public Static Class DateExamples
 
         // Differenz zweier Date-Werte
         // Kann in Core nicht kompiliert werden wegen Date

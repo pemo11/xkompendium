@@ -1,4 +1,4 @@
-﻿// LinqBeispiele.prg
+﻿// LinqExamples.prg
 
 #define lCore
 
@@ -8,9 +8,9 @@ Using System.Collections.Generic
 Using System.IO
 Using System.Linq
 
-Begin Namespace XSharpAllgemein
+Begin Namespace XKompendium
 
-	Static Class LinqBeispiele
+	Static Class LinqExamples
 
         Static Method WhereBeispiel() As Void
             Local Werte := List<Int>{}{11,22,33,44,55,66,77,88} As List<Int>

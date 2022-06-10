@@ -1,8 +1,8 @@
-﻿// ScopeBeispiele.prg
+﻿// ScopeExamples.prg
 
 Using System
 
-Begin Namespace XSharpAllgemein
+Begin Namespace XKompendium
 
     Global v2 As Int
 

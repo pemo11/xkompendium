@@ -1,10 +1,11 @@
-﻿// File: AnonymeMethoden.prg
+﻿// File: AnonymousMethods.prg
+
 Using System
 Using System.Timers
 
-Begin Namespace XSharpAllgemein
+Begin Namespace XKompendium
 
-	Static Class AnonymeMethoden
+	Static Class AnonymousMethods
         Static Private tmr As Timer
         Static Private Counter := 0 As Int32
 
@@ -48,7 +49,7 @@ Begin Namespace XSharpAllgemein
             Counter := 0
             tmr := Timer{}
             tmr:interval := 1000
-            tmr:Elapsed += {Sender, e => 
+            tmr:Elapsed += {Sender, e =>
                 ? "*** Timer-Event ***"
                 Counter++
                 If Counter == 5
