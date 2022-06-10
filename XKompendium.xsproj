@@ -1,28 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(XSharpMsBuildDir)\XSharp.Default.props" />
   <PropertyGroup>
-    <ProjectGuid>8006a76a-9fec-4fa6-aa69-a6f620ef28b6</ProjectGuid>
+    <ProjectGuid>baf620ed-098d-4da0-87ff-d0e0022341a0</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>XSharpAllgemein</RootNamespace>
-    <AssemblyName>XSharpAllgemein</AssemblyName>
+    <RootNamespace>XKompendium</RootNamespace>
+    <AssemblyName>XKompendium</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <Name>XSharpAllgemein</Name>
+    <Name>XKompendium</Name>
     <Nologo>true</Nologo>
     <GenerateFullPaths>true</GenerateFullPaths>
     <Dialect>VO</Dialect>
     <vo15>false</vo15>
-    <OutputName>XSharpAllgemein</OutputName>
-    <NamedArgs>True</NamedArgs>
-    <StartupObject />
-    <ApplicationIcon />
-    <VulcanCompatibleResources>False</VulcanCompatibleResources>
+    <OutputName>XKompendium</OutputName>
     <XSharpProjectversion>2.11.0.1</XSharpProjectversion>
-    <Memvar>False</Memvar>
-    <Undeclared>False</Undeclared>
-    <NoWin32Manifest>False</NoWin32Manifest>
-    <AZ>False</AZ>
+    <StartupObject />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'" Label="Configuration">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,8 +26,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
-    <DocumentationFile>XSharpAllgemein.Xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'" Label="Configuration">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -48,53 +39,24 @@
   </PropertyGroup>
   <Import Project="$(XSharpMsBuildDir)\XSharp.targets" />
   <ItemGroup>
-    <Reference Include="Microsoft.CSharp, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <Name>Microsoft.CSharp</Name>
-      <AssemblyName>Microsoft.CSharp.dll</AssemblyName>
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
     <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
       <Name>Microsoft.Office.Interop.Word</Name>
       <AssemblyName>Microsoft.Office.Interop.Word.dll</AssemblyName>
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\EFRuntimeDateien\Microsoft.Office.Interop.Word.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib" />
-    <Reference Include="office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
-      <Name>office</Name>
-      <AssemblyName>Office.dll</AssemblyName>
-      <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342">
       <Name>Oracle.ManagedDataAccess</Name>
       <AssemblyName>Oracle.ManagedDataAccess.dll</AssemblyName>
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\Assemblies\Oracle\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.DataSetExtensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-      <Name>System.Data.DataSetExtensions</Name>
-      <AssemblyName>System.Data.DataSetExtensions.dll</AssemblyName>
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="System.Drawing">
-      <Name>System.Drawing</Name>
-      <SpecificVersion>False</SpecificVersion>
-      <AssemblyName>System.Drawing.dll</AssemblyName>
-    </Reference>
-    <Reference Include="System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <Name>System.Management</Name>
-      <AssemblyName>System.Management.dll</AssemblyName>
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="System.Windows.Forms">
-      <Name>System.Windows.Forms</Name>
-      <SpecificVersion>False</SpecificVersion>
-      <AssemblyName>System.Windows.Forms.dll</AssemblyName>
-    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="VORDDClasses, Version=2.6.0.0, Culture=neutral, PublicKeyToken=a967d8055360a7b9">
@@ -102,84 +64,94 @@
       <AssemblyName>VORDDClasses.dll</AssemblyName>
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>C:\Program Files (x86)\XSharp\Assemblies\VORDDClasses.dll</HintPath>
     </Reference>
     <Reference Include="VOSystemClasses, Version=2.6.0.0, Culture=neutral, PublicKeyToken=a967d8055360a7b9">
       <Name>VOSystemClasses</Name>
       <AssemblyName>VOSystemClasses.dll</AssemblyName>
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>C:\Program Files (x86)\XSharp\Assemblies\VOSystemClasses.dll</HintPath>
     </Reference>
     <Reference Include="XSharp.Core, Version=2.6.0.0, Culture=neutral, PublicKeyToken=ed555a0467764586">
       <Name>XSharp.Core</Name>
       <AssemblyName>XSharp.Core.dll</AssemblyName>
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\Assemblies\XSharp211\XSharp.Core.dll</HintPath>
     </Reference>
     <Reference Include="XSharp.RT, Version=2.6.0.0, Culture=neutral, PublicKeyToken=ed555a0467764586">
       <Name>XSharp.RT</Name>
       <AssemblyName>XSharp.RT.dll</AssemblyName>
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\Assemblies\XSharp211\XSharp.RT.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AllgemeineSyntax.prg" />
-    <Content Include="ArrayBeispiele1.prg" />
-    <Compile Include="AnonymeMethoden.prg" />
-    <Compile Include="ArrayBeispiele2.prg" />
-    <Compile Include="AScanBeispiele.prg" />
-    <Compile Include="AsyncBeispiele.prg" />
-    <Compile Include="DirectoryMove.prg" />
-    <Compile Include="DiverseFunctions.prg" />
-    <Compile Include="ClassDefinition.prg" />
-    <Compile Include="ConstructorChaining.prg" />
-    <None Include="DataReaderBeispiele.prg" />
-    <Compile Include="DataTableLinq.prg" />
-    <Compile Include="DataTableSelect.prg" />
-    <Compile Include="Dateien.prg" />
-    <Compile Include="DatumBeispiele.prg" />
-    <None Include="Db.config" />
-    <Compile Include="DBServer.prg" />
-    <Compile Include="DictionaryBeispiele.prg" />
-    <Compile Include="Document.prg" />
-    <None Include="ExtensionMethod1.prg" />
-    <Compile Include="EFDatenbank.prg" />
-    <Compile Include="Events.prg" />
-    <Compile Include="Exceptions.prg" />
-    <Compile Include="ForEachBeispiele.prg" />
-    <Compile Include="LINGGroup.prg" />
-    <Compile Include="LinqBeispiele.prg" />
-    <Compile Include="LINQDataColumn.prg" />
-    <Compile Include="MonatePerEnumRange.prg" />
-    <Compile Include="NamedArguments.prg" />
-    <Compile Include="NetVersion.prg" />
-    <Compile Include="NullAbfragen.prg" />
-    <None Include="OLEAuto.prg" />
-    <Compile Include="NumericBeispiele.prg" />
-    <Compile Include="OracleTest.prg" />
-    <Compile Include="Ort.prg" />
+    <Compile Include="Arrays\ArrayExamples1.prg" />
+    <Compile Include="Arrays\ArrayExamples2.prg" />
+    <Compile Include="Arrays\AScanExamples.prg" />
+    <Compile Include="Arrays\AsyncExamples.prg" />
+    <Compile Include="Classes\Ort.prg" />
+    <Compile Include="ControlStructures\Exceptions.prg" />
+    <Compile Include="ControlStructures\ForEachExamples.prg" />
+    <Compile Include="ControlStructures\Loops.prg" />
+    <Compile Include="ControlStructures\ScopeExamples.prg" />
+    <Compile Include="Database\DBServer.prg" />
+    <Compile Include="Database\OracleTest.prg" />
+    <Compile Include="Datatable\DataTableLinq.prg" />
+    <Compile Include="Datatable\DataTableSelect.prg" />
+    <Compile Include="Datatypes\DateExamples.prg" />
+    <Compile Include="Datatypes\NumericExamples.prg" />
+    <Compile Include="Datatypes\StringExamples.prg" />
+    <Compile Include="Datatypes\StringInterpolation.prg" />
+    <Compile Include="Datatypes\TupleExamples.prg" />
+    <Compile Include="Datatypes\VarLocalVergleich.prg" />
+    <Compile Include="FileSystem\FileExamples.prg" />
+    <Compile Include="FileSystem\DirectoryMove.prg" />
+    <Compile Include="GenericLists\DictionaryExamples.prg" />
+    <Compile Include="Lambdas\AnonymousMethods.prg" />
+    <Compile Include="LINQ\LINQGroupExamples.prg" />
+    <Compile Include="LINQ\LinqExamples.prg" />
+    <Compile Include="LINQ\LINQDataColumn.prg" />
+    <Compile Include="Msic\GeneralSyntaxExamples.prg" />
+    <Compile Include="Msic\MonatePerEnumRange.prg" />
+    <Compile Include="Msic\NamedArguments.prg" />
+    <Compile Include="Msic\NetVersion.prg" />
+    <Compile Include="Msic\NullExamples.prg" />
+    <Compile Include="Msic\WordAuto.prg" />
+    <Compile Include="Msic\XLinqExamples.prg" />
+    <Compile Include="OOP\ClassDefinition.prg" />
+    <Compile Include="OOP\ConstructorChaining.prg" />
+    <Compile Include="OOP\EventExamples.prg" />
+    <Compile Include="OOP\ExtensionMethod1.prg" />
     <Compile Include="Properties\AssemblyInfo.prg">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Program.prg">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Schleifen.prg" />
-    <Compile Include="ScopeBeispiele.prg" />
-    <Compile Include="SortBench01.prg" />
-    <Compile Include="StringBeispiele.prg" />
-    <Compile Include="StringInterpolation.prg" />
-    <Compile Include="TupelBeispiel.prg" />
-    <Compile Include="VarLocalVergleich.prg" />
-    <None Include="WordAuto.prg" />
-    <Compile Include="XLinqBeispiele.prg" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Arrays\" />
+    <Folder Include="ControlStructures\" />
+    <Folder Include="Database\" />
+    <Folder Include="Datatable\" />
+    <Folder Include="Datatypes\" />
+    <Folder Include="FileSystem\" />
+    <Folder Include="GenericLists\" />
+    <Folder Include="Lambdas\" />
+    <Folder Include="LINQ\" />
+    <Folder Include="Msic\" />
+    <Folder Include="Classes" />
+    <Folder Include="OOP\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="DOKUMENT.DBF" />
-    <None Include="Dokument2.dbf" />
+    <None Include="Database\Db.config" />
+    <None Include="README.md" />
+    <None Include="XKompendium.sln" />
   </ItemGroup>
   <!-- This next bit is required unless the macro used to Import your targets is defined in an MSBuild toolset. -->
   <ProjectExtensions>
@@ -188,7 +160,7 @@
     </ProjectCapabilities>
   </ProjectExtensions>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <PreBuildEvent>copy $(ProjectDir)/Books.dbf $(TargetDir)</PreBuildEvent>
+    <PreBuildEvent />
     <PostBuildEvent />
     <RunPostBuildEvent />
   </PropertyGroup>

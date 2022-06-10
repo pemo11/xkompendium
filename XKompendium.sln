@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32413.511
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{AA6C8D78-22FF-423A-9C7C-5F2393824E04}") = "XSharpAllgemein", "XSharpAllgemein.xsproj", "{8006A76A-9FEC-4FA6-AA69-A6F620EF28B6}"
+Project("{AA6C8D78-22FF-423A-9C7C-5F2393824E04}") = "XKompendium", "XKompendium.xsproj", "{BAF620ED-098D-4DA0-87FF-D0E0022341A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8006A76A-9FEC-4FA6-AA69-A6F620EF28B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8006A76A-9FEC-4FA6-AA69-A6F620EF28B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8006A76A-9FEC-4FA6-AA69-A6F620EF28B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8006A76A-9FEC-4FA6-AA69-A6F620EF28B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAF620ED-098D-4DA0-87FF-D0E0022341A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAF620ED-098D-4DA0-87FF-D0E0022341A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAF620ED-098D-4DA0-87FF-D0E0022341A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAF620ED-098D-4DA0-87FF-D0E0022341A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {9AC0DD96-C7AF-43F9-A381-D0546E109856}
+		SolutionGuid = {ECCA8E1C-CE9C-4CCB-A8CE-42AD34E7733E}
 	EndGlobalSection
 EndGlobal
