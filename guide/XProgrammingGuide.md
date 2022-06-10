@@ -1,6 +1,6 @@
 ﻿# The little X# programming guide
 
-*** **this is only an early and incomplete draft *** this is only an early and incomplete draft  *** this is only an early and incomplete draft  *** this is only an early draft *** this is only an early draft *** 
+*** **this is only an early and incomplete draft** *** **this is only an early and incomplete draft**  *** **this is only an early and incomplete draft**  *** this is only an early draft *** this is only an early draft *** 
 
 version 0.1
 last update: 06/10/22
