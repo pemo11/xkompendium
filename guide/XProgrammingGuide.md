@@ -1,4 +1,4 @@
-﻿# The little X# programming guide
+﻿# The little X# programming guide (by Peter Monadjemi)
 
 *** **this is only an early and incomplete draft** *** **this is only an early and incomplete draft**  *** **this is only an early and incomplete draft**  *** this is only an early draft *** this is only an early draft *** 
 
