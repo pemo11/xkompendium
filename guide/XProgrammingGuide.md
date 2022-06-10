@@ -5,7 +5,7 @@ last update: 06/10/22
 
 **Disclaimer:** This is neither a complete guide nor a rehash of the official X# documentation.
 
-So what is it? Its a light introduction to the X# language by using examples instead of textual descriptions. Its aimed for developers who alreay know a language like VO, Visual Basic or even C# and like to start with X#.
+So what is it? Its a light introduction to the X# language by using examples instead of textual descriptions. Its aimed for developers who already know a language like VO, Visual Basic or even C# and like to start with X#.
 
 Please always refer to the X# documentation by the X# team for any reference or if you are in doubt about anything written in this document.
 
