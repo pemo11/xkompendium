@@ -66,5 +66,5 @@ There are several floating point numeric types (table 1) but I recommend using d
 - No rounding errors
 - The best way to handle float values in an Oracle database
 
-One reason not use _decimal_ in the early days of .Net was the fact that each value occupies 28 bytes in memory. But even with older PCs that may "only" be equipped with 2 GB memory space should not be an issue.
+One reason for not using _decimal_ in the early days of .Net was the fact that each value occupies 28 bytes in memory. But even with older PCs that may "only" be equipped with 2 GB memory space should not be an issue.
 
