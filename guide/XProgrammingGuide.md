@@ -11,12 +11,14 @@ Please always refer to the X# documentation by the X# team for any reference or 
 
 ## Naming conventions
 
-This topic is really hard because there is no official naming convention and if you ask developers about the conventions you will probably get two kind of ansers:
+This topic is really hard because there is no official naming convention and if you ask developers about the conventions they use you will probably get two kind of ansers:
 
 1. We don't use any conventions
 2. We use our own conventions
 
-I think we can all (hopefully) agree that using the good old _Hungaring notation_ is not something that fits for being in the 21st century.
+I think we can all (hopefully) agree that using the good old _Hungarian notation_ is not something that fits for being in the 21st century.
+
+Just in case [Hungarion notation (https://en.wikipedia.org/wiki/Hungarian_notation)]
 
 ## The impact of Roslyn
 
