@@ -9,9 +9,9 @@ So what is it? Its a light introduction to the X# language by using examples ins
 
 Please always refer to the X# documentation by the X# team for any reference or if you are in doubt about anything written in this document.
 
-As being said this guide is not complete and its not perfect either. When I started this book the idea was just to document my own coding examples I had created over the years. The purpose of these examples were to help be better understand the X# language.
+As being said this guide is not complete and its not perfect either. When I started this book the idea was just to document my own coding examples I had created over the years. The purpose of these examples were to help me better understand the nitty gritty details of the X# language (mostly as a note to myself).
 
-While writing this guide I soon realized that I did't cover all the important topics and the number and quality of the examples differs as well.
+While writing this guide I soon realized that I did't cover all the important topics and the number and that the quality of the examples differs as well.
 
 As a real software project this guide is work in progress as well. And altough this not a wiki I will accept pull requests so that any X# developer can contribute her or his examples.
 
@@ -61,8 +61,8 @@ Since X# follows C# closely, these kind of convieniences are also available for 
 
 There are several floating point numeric types (table 1) but recommend using decimal:
 
-. No rounding errors
-. The best way to handle float values in an Oracle database
+- No rounding errors
+- The best way to handle float values in an Oracle database
 
 One reason not use _decimal_ was the fact that each value occupies 28 bytes in memory. But even with older PCs that may "only" be equipped with 2 GB memory space should not be an issue.
 
