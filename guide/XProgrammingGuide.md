@@ -26,6 +26,7 @@ Roslyn is just one of these Microsoft "codewords" that the company used extensiv
 
 The official name is *.NET Compiler platform*.
 
+![Alt Roslyn part 1](images/Roslyn01.png "fig 1: the Compiler Pipeline")
 
 ## Data types
 
