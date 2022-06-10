@@ -18,7 +18,7 @@ This topic is really hard because there is no official naming convention and if 
 
 I think we can all (hopefully) agree that using the good old _Hungarian notation_ is not something that fits for being in the 21st century.
 
-Just in case [Hungarion notation (https://en.wikipedia.org/wiki/Hungarian_notation)]
+Just in case [Hungarian notation](https://en.wikipedia.org/wiki/Hungarian_notation)
 
 ## The impact of Roslyn
 
