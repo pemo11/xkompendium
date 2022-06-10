@@ -1,6 +1,6 @@
 ﻿# The little X# programming guide
 
-Disclaimer: This is not a complete guide neither a rehash of the official X# documentation.
+Disclaimer: This is neither a complete guide nor a rehash of the official X# documentation.
 
 So what is it? Its a light introduction to the X# language by using examples instead of textual descriptions. Its aimed for developers who alreay know a language like VO, Visual Basic or even C# and like to start with X#.
 
