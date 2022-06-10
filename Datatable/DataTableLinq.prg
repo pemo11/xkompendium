@@ -1,12 +1,13 @@
 ﻿// File: DataTableLinq.prg
+
 Using System
 Using System.Collections.Generic
 Using System.Linq
 Using System.Data
 Using System.Text
 
-Begin Namespace XSharpAllgemein
-
+Begin Namespace XKompendium
+    
 	/// <summary>
     /// The DataTableLing class
     /// </summary>

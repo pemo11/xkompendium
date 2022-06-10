@@ -9,12 +9,12 @@ Using System.IO
 
 Using VO
 
-Begin Namespace XSharpAllgemein
+Begin Namespace XKompendium
 
 	/// <summary>
     /// DBServer-Beispiele
     /// </summary>
-	Public Static Class DBServerBeispiele
+	Public Static Class DBServerExamples
 
         // Beispiel für Fieldput
         Public Static Method DBBeispiel1() As Void

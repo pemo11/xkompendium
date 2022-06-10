@@ -3,7 +3,7 @@
 Using System
 Using Oracle.ManagedDataAccess.Client
 
-Begin Namespace XSharpAllgemein
+Begin Namespace XKompendium
 
     Public Static Class OracleTest
         Private Static ConStr := "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=oravm2)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=Eureka)));User Id=vghgw_admin;Password=vghgw_admin" As String

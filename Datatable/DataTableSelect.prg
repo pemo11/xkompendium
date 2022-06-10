@@ -1,17 +1,17 @@
 ﻿// File: DataTableBeispiele.prg
 
-USING System
-USING System.Collections.Generic
+Using System
+Using System.Collections.Generic
 Using System.Linq
 Using System.Data
-USING System.Text
+Using System.Text
 
-Begin Namespace XSharpAllgemein
+Begin Namespace XKompendium
 
 	/// <summary>
     /// The DataReaderBeispiele class.
     /// </summary>
-	CLASS DataTableBeispiele
+	Class DataTableExamples
     
         Public Static Method TableSelectBeispiel1() As Void
             Local ta := DataTable{} As DataTable
