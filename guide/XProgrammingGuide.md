@@ -1,9 +1,9 @@
 ﻿# The little X# programming guide
 
 version 0.1
-last update: 06/11/22
+last update: 06/10/22
 
-*Disclaimer:* This is neither a complete guide nor a rehash of the official X# documentation.
+**Disclaimer:** This is neither a complete guide nor a rehash of the official X# documentation.
 
 So what is it? Its a light introduction to the X# language by using examples instead of textual descriptions. Its aimed for developers who alreay know a language like VO, Visual Basic or even C# and like to start with X#.
 
@@ -26,10 +26,10 @@ Roslyn is just one of these Microsoft "codewords" that the company used extensiv
 
 The official name is *.NET Compiler platform*.
 
-(all the pictures in this section have the copyright of Microsoft - taken from https://docs.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/compiler-api-model)
+*(all the pictures in this section have the copyright of Microsoft - taken from https://docs.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/compiler-api-model)*
 
 ![Alt Roslyn part 1](images/Roslyn01.png "the Compiler Pipeline")
-*fig 1: the Compiler Pipeline*
+*Fig 1: the Compiler Pipeline*
 
 ## Data types
 
