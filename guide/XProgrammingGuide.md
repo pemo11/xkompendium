@@ -59,7 +59,7 @@ Since X# follows C# closely, these kind of convieniences are also available for 
 
 ### precision and rounding
 
-There are several floating point numeric types (table 1) but recommend using decimal:
+There are several floating point numeric types (table 1) but I recommend using decimal:
 
 - No rounding errors
 - The best way to handle float values in an Oracle database
