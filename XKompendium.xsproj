@@ -119,9 +119,9 @@
     <Compile Include="Misc\MonatePerEnumRange.prg" />
     <Compile Include="Misc\NamedArguments.prg" />
     <Compile Include="Misc\NetVersion.prg" />
-    <Compile Include="Misc\NullExamples.prg" />
     <Compile Include="Misc\WordAuto.prg" />
     <Compile Include="Misc\XLinqExamples.prg" />
+    <Compile Include="Nullalble\NullExamples.prg" />
     <Compile Include="OOP\ClassDefinition.prg" />
     <Compile Include="OOP\ConstructorChaining.prg" />
     <Compile Include="OOP\EventExamples.prg" />
@@ -132,6 +132,7 @@
     <Compile Include="Program.prg">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="XML\XLinqExamples.prg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Arrays\" />
@@ -141,15 +142,20 @@
     <Folder Include="Datatypes\" />
     <Folder Include="FileSystem\" />
     <Folder Include="GenericLists\" />
+    <Folder Include="guide\images" />
     <Folder Include="Lambdas\" />
     <Folder Include="LINQ\" />
     <Folder Include="Misc" />
     <Folder Include="Classes" />
+    <Folder Include="guide" />
+    <Folder Include="XML" />
+    <Folder Include="Nullalble" />
     <Folder Include="OOP\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Database\Db.config" />
+    <None Include="guide\XProgrammingGuide.md" />
     <None Include="README.md" />
     <None Include="XKompendium.sln" />
   </ItemGroup>
