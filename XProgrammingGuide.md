@@ -2,9 +2,9 @@
 
 Disclaimer: This is not a complete guide neither a rehash of the official X# documentation.
 
-So what is it? Its a light introduction to the X# language by using examples instead of textual descriptions.
+So what is it? Its a light introduction to the X# language by using examples instead of textual descriptions. Its aimed for developers who alreay know a language like VO, Visual Basic or even C# and like to start with X#.
 
-Please always refer to the X# documentation for any reference or if you are in doubt about anything written in this document.
+Please always refer to the X# documentation by the X# team for any reference or if you are in doubt about anything written in this document.
 
 ## Naming conventions
 
@@ -14,4 +14,17 @@ This topic is really hard because there is no official naming convention and if 
 2. We use our own conventions
 
 I think we can all (hopefully) agree that using the good old _Hungaring notation_ is not something that fits for being in the 21st century.
+
+## The impact of Roslyn
+
+You may have read this at several occasions. X# sits on top of Roslyn (so to speak) or is based on Roslyn or depends on Roslyn.
+
+Roslyn is just one of these Microsoft "codewords" that the company used extensively in the 80ties and 90ties - like jackets with rolled up sleeves (for example the one that Michael Jackson wore in the famous Thriller video).
+
+The official name is *.NET Compiler platform*.
+
+
+## Data types
+
+Since X# is based on the CLR (_Common Language Runtime_) of the underlying .NET runtime it has to use the same datatypes. But they do not have to hame the same names of couse.
 

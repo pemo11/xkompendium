@@ -1,9 +1,17 @@
-﻿USING System
+﻿// file: Program.prg
+
+Using System
 Using System.Collections.Generic
 Using System.Linq
 Using System.Text
 
-Function Start() As Void Strict
-    Console.WriteLine("Hello World!")
-    Console.WriteLine("Press any key to continue...")
-    Console.ReadKey()
+Begin Namespace XKompendium
+   
+    [STAThread];
+    Function Start() As Void Strict
+        Console.ForegroundColor := ConsoleColor.Green
+        ArrayExamples1.ArrayScan0()
+        Console.WriteLine("Fertig...")
+        Console.ReadKey()
+
+End Namespace
