@@ -28,31 +28,31 @@ Begin Namespace XKompendium
             Return
 
         Static Method ArrayBeispiel2() As Void
-            Local Orte := <String>{"Esslingen", "Plochingen", "Nürtingen","Geislingen"} As String[]
-            foreach Ort As String in Orte
-                ? Ort
+            Local Places := <String>{"Esslingen", "Plochingen", "Nürtingen","Geislingen"} As String[]
+            Foreach Place As String In Places
+                ? Place
             next
 
         Static Method ArrayContains1() As Void
-            Local Orte := <String>{"Esslingen", "Plochingen", "Nürtingen","Geislingen"} As String[]
-            Var result1 := Orte:Any({ort => ort == "Esslingen"})
+            Local Places := <String>{"Esslingen", "Plochingen", "Nürtingen","Geislingen"} As String[]
+            Var result1 := Places:Any({ort => ort == "Esslingen"})
             ? result1
-            Var result2 := Orte:Any({ort => ort == "Tübingen"})
+            Var result2 := Places:Any({ort => ort == "Tübingen"})
             ? result2
 
         // Index eines Objekts in einem Array
         Static Method FindObject1() As Void
-            Local Ort1 := Ort{"Esslingen", 80000} As Ort
-            Local Ort2 := Ort{"Plochingen", 35000} As Ort
-            Local Ort3 := Ort{"Geislingen", 28000} As Ort
-            Local Orte := List<Ort>{}{Ort1,Ort2,Ort3} As List<Ort>
+            Local Place1 := Place{"Esslingen", 80000} As Place
+            Local Place2 := Place{"Plochingen", 35000} As Place
+            Local Place3 := Place{"Geislingen", 28000} As Place
+            Local Places := List<Place>{}{Place1,Place2,Place3} As List<Place>
             // Richtig - liefert 0
-            ? Orte:IndexOf(Ort1)
+            ? Places:IndexOf(Place1)
             // Falsch - liefert -1
-            Local SuchOrt := Ort{"Esslingen", 80000} As Ort
-            ? Orte:IndexOf(SuchOrt)
+            Local SearchPlace := Place{"Esslingen", 80000} As Place
+            ? Places:IndexOf(SearchPlace)
             // Richtig - liefert 0
-            ? Orte:FindIndex({o => o:Name == SuchOrt:Name})
+            ? Places:FindIndex({o => o:Name == SearchPlace:Name})
 
         // Angeben, ob ein Array leer ist
         Static Method CheckEmptyArray() As Void

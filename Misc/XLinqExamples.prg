@@ -10,7 +10,7 @@ Begin Namespace XKompendium
     /// <summary>
     /// XLinqExamples class
     /// </summary>
-	Static Class XLinqExamples
+	Static Class XKompendium
         
         Static Private Method GetXDoc() As XDocument
             Local xmlText := "" As String

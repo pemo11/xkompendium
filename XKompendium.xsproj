@@ -93,7 +93,9 @@
     <Compile Include="Arrays\ArrayExamples2.prg" />
     <Compile Include="Arrays\AScanExamples.prg" />
     <Compile Include="Arrays\AsyncExamples.prg" />
-    <Compile Include="Classes\Ort.prg" />
+    <Compile Include="Classes\Author.prg" />
+    <Compile Include="Classes\Document.prg" />
+    <Compile Include="Classes\Place.prg" />
     <Compile Include="ControlStructures\Exceptions.prg" />
     <Compile Include="ControlStructures\ForEachExamples.prg" />
     <Compile Include="ControlStructures\Loops.prg" />
@@ -122,7 +124,6 @@
     <Compile Include="Misc\WordAuto.prg" />
     <Compile Include="Misc\XLinqExamples.prg" />
     <Compile Include="Nullalble\NullExamples.prg" />
-    <Compile Include="OOP\ClassDefinition.prg" />
     <Compile Include="OOP\ConstructorChaining.prg" />
     <Compile Include="OOP\EventExamples.prg" />
     <Compile Include="OOP\ExtensionMethod1.prg" />

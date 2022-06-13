@@ -7,7 +7,7 @@ Using Word := Microsoft.Office.Interop.Word
 
 Using System.Threading
 
-Begin Namespace XSharpAllgemein
+Begin Namespace XKompendium
 
 	/// <summary>
     /// The WordAuto class.

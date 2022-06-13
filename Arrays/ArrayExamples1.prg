@@ -185,11 +185,11 @@ Begin Namespace XKompendium
         #endif
 
         Static Method ObjectArray() As Void
-            Local dok1 := Dokument{"Alles klar mit X#!"}  As Dokument
-            Local dok2 := Dokument{"Alles klar mit C#!"}  As Dokument
-            Local Dokumente := <Dokument>{dok1, dok2} As Dokument[]
-            foreach dok As Dokument in Dokumente
-                ? dok:Titel
+            Local dok1 := Document{1, "Alles klar mit X#!"}  As Document
+            Local dok2 := Document{2, "Alles klar mit C#!"}  As Document
+            Local Documents := <Document>{dok1, dok2} As Document[]
+            Foreach dok As Document In Documents
+                ? dok:Title
             next
             Return
 
@@ -198,15 +198,5 @@ Begin Namespace XKompendium
             Return
 
     End Class
-
-    Class Dokument
-        Public Titel As String
-
-        Constructor (Titel As String)
-            Self:Titel := Titel
-            Return
-
-    End Class
-
 
 End Namespace

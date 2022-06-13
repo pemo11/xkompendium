@@ -1,0 +1,6 @@
+.vs/
+*.suo
+*.user
+*.dll
+obj/debug
+bin/debug
