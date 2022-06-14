@@ -1,17 +1,15 @@
-﻿// File: Place.prg
-
-Using System
-Using System.Collections.Generic
-Using System.Text
+﻿// ============================================================================
+// File: CityInfo.prg
+// ============================================================================
 
 Begin Namespace XKompendium
-
-	/// <summary>
-    /// Definition of the Place class
+    
+    /// <summary>
+    /// Definition of the CityInfo class
     /// </summary>
-	Class Place
-        Private _Inhabitants As Int
+    Class CityInfo
         Private _Name As String
+        Private _Inhabitants As Int
         
         Constructor(Name As String, Inhabitants As Int)
             Self:_Name := Name
@@ -35,7 +33,10 @@ Begin Namespace XKompendium
                 Self:_Inhabitants := Value
             End Set
         End Property
+        
+        Method ToString() As String
+            Return "Name=" + Self:_Name + " Inhabitants: " + Self:_Inhabitants:ToString("f2")
 
     End Class
-
+    
 End Namespace

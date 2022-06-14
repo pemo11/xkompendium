@@ -15,22 +15,22 @@ Begin Namespace XKompendium
             Return
 
         Public Static Method DictionaryBeispiel1() As Void
-            Local dicStaedte := Dictionary<String, StadtInfo>{} As Dictionary<String, StadtInfo>
-            dicStaedte:Add("ES", StadtInfo{"Esslingen", 89000})
-            dicStaedte:Add("PO", StadtInfo{"Plochingen", 34000})
-            dicStaedte:Add("GP", StadtInfo{"Göppingen", 45000})
-            ForEach k As String in dicStaedte:Keys
-                ? dicStaedte[k]:ToString()
+            Local dicCities := Dictionary<String, CityInfo>{} As Dictionary<String, CityInfo>
+            dicCities:Add("ES", CityInfo{"Esslingen", 89000})
+            dicCities:Add("PO", CityInfo{"Plochingen", 34000})
+            dicCities:Add("GP", CityInfo{"Göppingen", 45000})
+            Foreach k As String In dicCities:Keys
+                ? dicCities[k]:ToString()
             Next
 
         Public Static Method DictionaryBeispiel2() As Void
-            Local dicStaedte := Dictionary<String, StadtInfo>{}  {;
-            {"ES", StadtInfo{"Esslingen", 89000}},;
-            {"PO", StadtInfo{"Plochingen", 34000}},;
-            {"GP", StadtInfo{"Göppingen", 45000}};
-            } As Dictionary<String, StadtInfo>
-            ForEach k As String in dicStaedte:Keys
-                ? dicStaedte[k]:ToString()
+            Local dicCities := Dictionary<String, CityInfo>{}  {;
+            {"ES", CityInfo{"Esslingen", 89000}},;
+            {"PO", CityInfo{"Plochingen", 34000}},;
+            {"GP", CityInfo{"Göppingen", 45000}};
+            } As Dictionary<String, CityInfo>
+            Foreach k As String In dicCities:Keys
+                ? dicCities[k]:ToString()
             Next
 
     End Class

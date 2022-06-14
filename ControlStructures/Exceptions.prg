@@ -1,4 +1,6 @@
-﻿// File: Exceptions.prg
+﻿// ============================================================================
+// File: Exceptions.prg
+// ============================================================================
 
 Using System
 Using System.Data.SqlClient
@@ -7,11 +9,14 @@ Begin Namespace XKompendium
 
 	Static Class ExceptionExamples
 
-        Static Method ExceptionBeispiel1() As Void
+        /// <summary>
+        /// Example for throw
+        /// </summary>
+        Static Method ExceptionExample1() As Void
             Try
-                // Exception auslösen
+                // create an exception
                 Throw Exception{"Feieralarm!"}
-            // Wichtig: SystemException fängt keine Exceptions
+            // important: SystemException does not catch this exception
             Catch ex As SystemException
                 Console.WriteLine(i"SystemException: {ex}")
             Catch ex As Exception
@@ -19,6 +24,9 @@ Begin Namespace XKompendium
             End Try
             Return
 
+        /// <summary>
+        /// Example for catching an SqlException without a database
+        /// </summary>
         Static Method MockSqlExection() As SQLException
             Local sqlEx As SqlException
             Try
@@ -29,13 +37,16 @@ Begin Namespace XKompendium
             End Try
             Return sqlEx
 
-        Static Method ExceptionBeispiel2() As Void
+        /// <summary>
+        /// Example for throw
+        /// </summary>
+        Static Method ExceptionExample2() As Void
             Try
-                // SqlException weiterreichen
+                // throw a SqlException to the next calling level
                 Throw MockSqlExection()
-            // Wichtig: SystemException fängt eine SqlException
+                // important: SystemException does not catch this exception
             Catch ex As SystemException
-                // SqlException besitzt eine Errors-Property mit allen Errors
+                // SqlException has an Errors-Property with all the errors
                 Console.WriteLine(i"SystemException: {ex} Typ: {ex:GetType().Name}")
             Catch ex As Exception
                 Console.WriteLine(i"Exception: {ex}")

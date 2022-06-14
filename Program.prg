@@ -10,7 +10,8 @@ Begin Namespace XKompendium
     [STAThread];
     Function Start() As Void Strict
         Console.ForegroundColor := ConsoleColor.Green
-        NullExamples.NullCompare3()
+        // NullExamples.NullCompare4()
+        ArrayExamples1.NetArray()
         Console.WriteLine()
         Console.WriteLine("Fertig...")
         Console.ReadKey()

@@ -11,7 +11,7 @@ Begin Namespace XKompendium
 	/// <summary>
     /// The DataReaderBeispiele class.
     /// </summary>
-	Class DataTableExamples
+	Class DataTableExamples2
     
         Public Static Method TableSelectBeispiel1() As Void
             Local ta := DataTable{} As DataTable

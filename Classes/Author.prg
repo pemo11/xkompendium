@@ -1,4 +1,6 @@
-﻿// File: Author.prg
+﻿// ============================================================================
+// File: Author.prg
+// ============================================================================
 
 Begin Namespace XKompendium
 
@@ -24,5 +26,6 @@ Begin Namespace XKompendium
             End Set
         End Property
 
-	End Class
+    End Class
+    
 End Namespace

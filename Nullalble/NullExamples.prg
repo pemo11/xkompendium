@@ -61,6 +61,22 @@ Begin Namespace XKompendium
             
             Local d2 As Document
             ? d2?:Author?:Name
+
+        /// <summary>
+        /// Null query with value types
+        /// </summary>
+        Static Method NullCompare4() As Void
+            Local n1 := 100 As Int?
+            Local n2 As Int?
+            
+            If n1:HasValue
+                ? "n1 was initialized"
+            End If
+
+            If n2:HasValue
+                ? "n2 was initialized"
+            End If
+
     End Class
     
 End Namespace
