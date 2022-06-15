@@ -1,37 +1,48 @@
-﻿// Loops.prg
+﻿// ============================================================================
+// file: Loops.prg
+// ============================================================================
 
 Using System
 
 Begin Namespace XKompendium
 
 	/// <summary>
-    /// The Schleifen class.
+    /// the definition of the Loops class
     /// </summary>
 	Public Class Loops
 
-        Static Method For1() As  Void
+        /// <summary>
+        /// Classic for loop with index variable
+        /// </summary>
+        Static Method ForExample1() As  Void
             For Local i := 0 Upto 10
                 ? i
             Next
             Return
 
-        Static Method For2() As  Void
+        /// <summary>
+        /// Classic for loop with index variable and step
+        /// </summary>
+        Static Method ForExample2() As  Void
             For Local i := 0 Upto 10 Step 3
                 ? i
             Next
             Return
 
-        Static Method LoopBreak() As  Void
-            Local Abbruch := False As Boolean
+        /// <summary>
+        /// Classic for loop with break through exit
+        /// </summary>
+        Static Method LoopBreakExample() As  Void
+            Local CancelFlag := False As Boolean
             For Local i := 1 Upto 3
                 For Local j := 1 Upto 3
-                    ? i"*** Durchlauf mit i={i} und j={j} ***"
+                    ? i"*** Looping with i={i} and j={j} ***"
                     If j == 2
-                        Abbruch := True
+                        CancelFlag := True
                         Exit
                     Endif
                 Next
-                If Abbruch
+                If CancelFlag
                     Exit
                 Endif
             Next

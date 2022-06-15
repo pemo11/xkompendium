@@ -1,5 +1,5 @@
 ﻿// ============================================================================
-// ForEachExamples.prg
+// file: ForEachExamples.prg
 // ============================================================================
 
 Using System
@@ -14,34 +14,48 @@ Begin Namespace XKompendium
         Private Static Cities2 As List<CityInfo>
         Private Static City2 As CityInfo
 
+        /// <summary>
+        /// The constructor
+        /// </summary>
         Static Constructor()
             Cities2 := List<CityInfo>{}{CityInfo{"Esslingen",80000},;
              CityInfo{"Plochingen",45000}, CityInfo{"Göppingen",42000},;
              CityInfo{"Nürtingen", 32000}}
 
-        Static Method Beispiel1() As Void
+        /// <summary>
+        /// Enumerating a List<T> with foreach and an var
+        /// </summary>
+        Static Method ForEachExample1() As Void
             Var Cities := List<String>{}{"Esslingen","Plochingen","Göppingen","Nürtingen"}
             Foreach Var City In Cities2
                 ? City
             Next
             Return
 
-        Static Method Beispiel2() As Void
-            var Cities := List<String>{}{"Esslingen","Plochingen","Göppingen","Nürtingen"}
+        /// <summary>
+        /// Enumerating a List<T> with foreach and an explicit data type
+        /// </summary>
+        Static Method ForEachExample2() As Void
+            Var Cities := List<String>{}{"Esslingen","Plochingen","Göppingen","Nürtingen"}
             Foreach City As String In Cities
                 ? City
             Next
             Return
 
-        Static Method Beispiel3() As Void
-            var Controls := List<Control>{}{Control{"Button"},Control{"Ribbon"},Control{"Checkbox"}}
-            ForEach var Control in Controls
+        /// <summary>
+        /// Initializing a List<T> list
+        /// </summary>
+        Static Method ForEachExample3() As Void
+            Var Controls := List<Control>{}{Control{"Button"},Control{"Ribbon"},Control{"Checkbox"}}
+            Foreach Var Control In Controls
                 ? Control:Name
             Next
 
-        Static Method Beispiel4() As Void
-            // Durchlauf einer Liste über eine Klassenvariable
-            // Diese Schreibweise geht nicht
+        /// <summary>
+        /// Enumerating a List<T> with a class variable
+        /// </summary>
+        Static Method ForEachExample4() As Void
+            // this syntax is not allowed
             // ForEach Self:Stadt2 in Self:Staedte2
             Foreach si As CityInfo In Cities2
                 City2 := si
@@ -49,10 +63,10 @@ Begin Namespace XKompendium
             Next
             Return
 
-        Static Method Beispiel5() As Void
-            // Durchlauf einer Liste über eine Klassenvariable
-            // Diese Schreibweise geht nicht
-            // ForEach Self:Stadt2 in Self:Staedte2
+        /// <summary>
+        /// Enumerating a List<T> with a index variable
+        /// </summary>
+        Static Method ForEachExample5() As Void
             For Local i := 0 Upto Cities2:Count - 1
                 City2 := Cities2[i]
                 ? City2:Name

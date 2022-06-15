@@ -7,7 +7,7 @@ Begin Namespace XKompendium
 
 
 	/// <summary>
-    /// The DictionaryBeispiele class.
+    /// The DictionaryBeispiele class
     /// </summary>
 	Public Class DictionaryExamples
 
@@ -25,10 +25,10 @@ Begin Namespace XKompendium
 
         Public Static Method DictionaryBeispiel2() As Void
             Local dicCities := Dictionary<String, CityInfo>{}  {;
-            {"ES", CityInfo{"Esslingen", 89000}},;
-            {"PO", CityInfo{"Plochingen", 34000}},;
-            {"GP", CityInfo{"Göppingen", 45000}};
-            } As Dictionary<String, CityInfo>
+             {"ES", CityInfo{"Esslingen", 89000}},;
+             {"PO", CityInfo{"Plochingen", 34000}},;
+             {"GP", CityInfo{"Göppingen", 45000}};
+             } As Dictionary<String, CityInfo>
             Foreach k As String In dicCities:Keys
                 ? dicCities[k]:ToString()
             Next
