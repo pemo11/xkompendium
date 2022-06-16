@@ -1,4 +1,6 @@
-﻿// File: DataTableLinq.prg
+﻿// ============================================================================
+// File: DataTableLinq.prg
+// ============================================================================
 
 Using System
 Using System.Collections.Generic
@@ -9,10 +11,14 @@ Using System.Text
 Begin Namespace XKompendium
     
 	/// <summary>
-    /// The DataTableLing class
+    /// The definition of the DataTableLing class
     /// </summary>
 	Class DataTableLinq
     
+        /// <summary>
+        /// Uses LINQ and FoReach to access each row of a DataTable
+        /// ID: XS_DataTable01
+        /// </summary>
         Public Static Method TableForEachBeispiel1() As Void
             Local ta := DataTable{} As DataTable
             ta:Columns:Add(DataColumn{"Id", typeof(Int)})
@@ -34,7 +40,19 @@ Begin Namespace XKompendium
         
         End Method
 
-
+        /// <summary>
+        /// Example for the skip-Method
+        /// ID: XS_DataTable01
+        /// </summary>
+        Public Static Method SkipColumn() As Void
+            Local ta := DataTable{"tab1"} As DataTable
+            ta:Columns:Add(DataColumn{"Spalte1", typeof(String)})
+            ta:Columns:Add(DataColumn{"Spalte2", typeof(String)})
+            ta:Columns:Add(DataColumn{"Spalte3", typeof(String)})
+            // Cast<DataColumn> erforderlich, damit Skip() angewendet werden kann
+            Foreach col As DataColumn In ta:Columns:Cast<DataColumn>():Skip(1)
+                ? col:ColumnName
+            Next
 
     End Class
     

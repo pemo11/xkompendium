@@ -1,4 +1,6 @@
-﻿// File: DataTableExamples.prg
+﻿// ============================================================================
+// File: DataTableExamples.prg
+// ============================================================================
 
 Using System.Data
 
@@ -9,7 +11,7 @@ Begin Namespace XKompendium
     /// </summary>
 	Class DataTableExamples
 
-     /// <summary>
+        /// <summary>
         /// ID: XS_DataTable01
         /// Creates a new datatable, add some rows and outputs them
         /// </summary>
@@ -47,7 +49,6 @@ Begin Namespace XKompendium
                 ? ausgabe
             Next
 
-
         /// <summary>
         /// ID: XS_DataTable02
         /// Creates a new datatable, add some rows and select a few and output them
@@ -81,10 +82,6 @@ Begin Namespace XKompendium
                 ? row1["Name"]:ToString() + "/" + row1["Id"]:ToString()
             Next
 
-
-   
-
-
-
 	End Class
+    
 End Namespace

@@ -1,7 +1,5 @@
 ﻿// ============================================================================
 // File: DBServer.prg
-// Beispiele zu DBServer
-// Creation Date : 19.08.2021 08:10:00
 // ============================================================================
 
 Using System
@@ -15,8 +13,10 @@ Begin Namespace XKompendium
     /// DBServer-Beispiele
     /// </summary>
 	Public Static Class DBServerExamples
-
-        // Beispiel für Fieldput
+    
+        /// <summary>
+        /// Example for Fieldput
+        /// </summary>
         Public Static Method DBBeispiel1() As Void
             Local dbPfad := Path.Combine(Environment.CurrentDirectory, "Dokument2.dbf") As String
             Local oTest := DBServer{dbPfad,,,"DBFCDX"} As DBServer
@@ -37,7 +37,9 @@ Begin Namespace XKompendium
 
             Return
 
-        // Beispiel für Fieldget, Skip
+        /// <summary>
+        /// Example for Fieldget, Skip
+        /// </summary>
         Public Static Method DBBeispiel2() As Void
             Local dbPfad := Path.Combine(Environment.CurrentDirectory, "Dokument2.dbf") As String
             Local oTest := DBServer{dbPfad,,,"DBFCDX"} As DBServer
@@ -49,7 +51,9 @@ Begin Namespace XKompendium
 
             Return
 
-        // Beispiel für Seek
+        /// <summary>
+        /// Example for Seek
+        /// </summary>
         Public Static Method DBBeispiel3() As Void
             Local dbPfad := Path.Combine(Environment.CurrentDirectory, "Books.dbf") As String
             Local oTest := DBServer{dbPfad,,,"DBFCDX"} As DBServer

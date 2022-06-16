@@ -1,4 +1,6 @@
-﻿// File: OracleTest.prg
+﻿// ============================================================================
+// File: OracleTest.prg
+// ============================================================================
 
 Using System
 Using Oracle.ManagedDataAccess.Client
@@ -8,6 +10,9 @@ Begin Namespace XKompendium
     Public Static Class OracleTest
         Private Static ConStr := "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=oravm2)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=Eureka)));User Id=vghgw_admin;Password=vghgw_admin" As String
 
+	    /// <summary>
+        /// Query decimal values from an Oracle database
+        /// </summary>
         Public Static Method DecimalTest1() As Void
             Local sqlText := "Select * From Jukos_Verfahren" As String
             Try
@@ -32,6 +37,9 @@ Begin Namespace XKompendium
             Return
         End Method
 
+	    /// <summary>
+        /// Query decimal values from an Oracle database
+        /// </summary>
         Public Static Method DecimalTest2() As Void
             Local sqlText := "Select Max(JV_VER_ID) As MaxId From Jukos_Verfahren" As String
             Try
@@ -54,6 +62,9 @@ Begin Namespace XKompendium
             Return
         End Method
 
+	    /// <summary>
+        /// Query decimal values from an Oracle database
+        /// </summary>
         Public Static Method DecimalTest3() As Void
             Local sqlText := "Select Max(JV_VER_ID) As MaxId From Jukos_Verfahren" As String
             Local verId As Int

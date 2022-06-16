@@ -1,4 +1,6 @@
-﻿// File: DataTableBeispiele.prg
+﻿// ============================================================================
+// File: DataTableBeispiele.prg
+// ============================================================================
 
 Using System
 Using System.Collections.Generic
@@ -9,69 +11,72 @@ Using System.Text
 Begin Namespace XKompendium
 
 	/// <summary>
-    /// The DataReaderBeispiele class.
+    /// The definition of the DataTableExamples2 class
     /// </summary>
 	Class DataTableExamples2
     
-        Public Static Method TableSelectBeispiel1() As Void
+        /// <summary>
+        /// filter rows with the select method
+        /// ID: XS_DataTable01
+        /// </summary>
+        Public Static Method TableSelectExample1() As Void
             Local ta := DataTable{} As DataTable
-            ta:Columns:Add(DataColumn{"Id", typeof(int)})
-            ta:Columns:Add(DataColumn{"Bez", typeof(string)})
-            for local i := 1 UpTo(10)
+            ta:Columns:Add(DataColumn{"Id", typeof(Int)})
+            ta:Columns:Add(DataColumn{"Bez", typeof(String)})
+            For Local i := 1 Upto(10)
                 Local r := ta:NewRow() As DataRow
                 r["id"] := i
                 r["Bez"] := i"SK: {i}"
                 ta:Rows:Add(r)
-            next
+            Next
             Local taFilter := "Bez='SK: 5'" As String
             Local rows := ta:Select(taFilter) As DataRow[]
-            foreach r As DataRow in rows
+            Foreach r As DataRow In rows
                 ? r[0]
-            next
+            Next
             taFilter := "Bez like 'SK*'"
             rows := ta:Select(taFilter)
-            foreach r As DataRow in rows
+            Foreach r As DataRow In rows
                 ? r[1]
-            next
+            Next
             Return
         
         End Method
 
-        Public Static Method TableSelectBeispiel2() As Void
+        /// <summary>
+        /// filter rows with the select method
+        /// ID: XS_DataTable01
+        /// </summary>
+        Public Static Method TableSelectExample2() As Void
             Local ta := DataTable{} As DataTable
-            ta:Columns:Add(DataColumn{"Id", typeof(int)})
-            ta:Columns:Add(DataColumn{"Bez", typeof(string)})
-            for local i := 1 UpTo(10)
+            ta:Columns:Add(DataColumn{"Id", typeof(Int)})
+            ta:Columns:Add(DataColumn{"Bez", typeof(String)})
+            For Local i := 1 Upto(10)
                 Local r := ta:NewRow() As DataRow
                 r["id"] := i
                 r["Bez"] := i"SK: {i}"
                 ta:Rows:Add(r)
-            next
+            Next
             Local taFilter := "Bez='SK: 5'" As String
             Local row := DataTableFilter(ta, taFilter) As DataRow
-            if row != Null
+            If row != Null
                 row["Bez"] := "!!!"
-            end if
-            foreach r As DataRow in ta:Rows
+            End If
+            Foreach r As DataRow In ta:Rows
                 ? r[1]
-            next
+            Next
             Return
         
         End Method
 
+        /// <summary>
+        /// Processing the select result
+        /// </summary>
         Public Static Method DataTableFilter(Ta As DataTable, Filter As String) As DataRow
             Local rows := ta:Select(Filter) As DataRow[]
-            Return IIf(rows:length > 0,rows[1],null)
+            Return Iif(rows:length > 0,rows[1],Null)
             
-        Public Static Method SkipColumn() As Void
-            Local ta := DataTable{"tab1"} As DataTable
-            ta:Columns:Add(DataColumn{"Spalte1", typeof(string)})
-            ta:Columns:Add(DataColumn{"Spalte2", typeof(string)})
-            ta:Columns:Add(DataColumn{"Spalte3", typeof(string)})
-            // Cast<DataColumn> erforderlich, damit Skip() angewendet werden kann
-            foreach col As DataColumn in ta:Columns:Cast<DataColumn>():Skip(1)
-                ? col:ColumnName
-            next
 
-	END CLASS
-END NAMESPACE // XSharpAllgemein
+    End Class
+    
+End Namespace
