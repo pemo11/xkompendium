@@ -7,7 +7,7 @@ Using System.Data
 Begin Namespace XKompendium
 
 	/// <summary>
-    /// The class definition of DataTableExamples class
+    /// The definition of DataTableExamples class
     /// </summary>
 	Class DataTableExamples
 
@@ -31,14 +31,14 @@ Begin Namespace XKompendium
             row["Id"] := 3
             row["Name"] := "Hansi"
             ta:Rows:Add(row)
-            // Index für die Rows beginnt bei 0!
+            // Index for the rows starts at 0!
             For Local i := 0 Upto ta:Rows:Count - 1
                 Local name := (String)ta:Rows[i]["Name"] As String
                 Local id := (Int)ta:Rows[i]["Id"] As Int
                 ? i"Id={id} - Name={name}"
             Next
             Console.ForegroundColor := ConsoleColor:Green
-            // Index für die Rows beginnt bei 0!
+            // Index for the rows starts at 0!
             Local ausgabe As String
             For Local i := 0 Upto ta:Rows:Count - 1
                 ausgabe := ""
@@ -77,8 +77,9 @@ Begin Namespace XKompendium
             
             // Select all the rows with id > 1
             Local results := ta:Select("Id > 1") As DataRow[]
-            // Enumerate all rows
-            Foreach row1 As DataRow In results
+            // Enumerate all rows - the loop variable can be explicitly typed or just vared
+            // Foreach row1 As DataRow In results
+            Foreach Var row1 In results
                 ? row1["Name"]:ToString() + "/" + row1["Id"]:ToString()
             Next
 

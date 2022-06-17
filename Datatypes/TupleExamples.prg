@@ -1,10 +1,15 @@
-﻿// File: TupleExamples.prg
+﻿// ============================================================================
+// file: TupleExamples.prg
+// ============================================================================
 
 Using System
 Using System.Collections.Generic
 
 Begin Namespace XKompendium
 
+    /// <summary>
+    /// The definition of the TupleExamples class
+    /// </summary>
 	Static Class TupleExamples
 
         // Geht nicht???

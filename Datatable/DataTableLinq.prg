@@ -4,17 +4,17 @@
 
 Using System
 Using System.Collections.Generic
-Using System.Linq
 Using System.Data
+Using System.Linq
 Using System.Text
 
 Begin Namespace XKompendium
-    
+
 	/// <summary>
     /// The definition of the DataTableLing class
     /// </summary>
 	Class DataTableLinq
-    
+
         /// <summary>
         /// Uses LINQ and FoReach to access each row of a DataTable
         /// ID: XS_DataTable01
@@ -28,16 +28,17 @@ Begin Namespace XKompendium
                 r["id"] := i
                 ta:Rows:Add(r)
             Next
-            // Alle State-Spalten auf True setzen
-            // Cast() ist erforderlich, damit es ein ToList gibt
-            // Etwas umständlich, aber es geht;)
+            // Set all state columns to true
+            // a Cast<> ist needed for being able to use the ToList() method
+            // Only a List<T> has a ForEach() method
+            // A little to much casting but it works;)
             ta:Rows:Cast<DataRow>():ToList():ForEach({r => r["State"] := False})
-            
+
             Foreach r As DataRow In ta:Rows
                 ? r["State"]
             Next
             Return
-        
+
         End Method
 
         /// <summary>
@@ -49,11 +50,11 @@ Begin Namespace XKompendium
             ta:Columns:Add(DataColumn{"Spalte1", typeof(String)})
             ta:Columns:Add(DataColumn{"Spalte2", typeof(String)})
             ta:Columns:Add(DataColumn{"Spalte3", typeof(String)})
-            // Cast<DataColumn> erforderlich, damit Skip() angewendet werden kann
+            // Cast<DataColumn> needed otherwise skip() is an unknown member
             Foreach col As DataColumn In ta:Columns:Cast<DataColumn>():Skip(1)
                 ? col:ColumnName
             Next
 
     End Class
-    
+
 End Namespace

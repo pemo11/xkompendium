@@ -1,4 +1,6 @@
-﻿// File: VarLocalVergleich.prg
+﻿// ============================================================================
+// file: VarLocalVergleich.prg
+// ============================================================================
 
 #define lCore
 
@@ -9,9 +11,15 @@ Using System.Data
 
 Begin Namespace XKompendium
 
-	Public Static Class VarLocalVergleich
+    /// <summary>
+    /// The definition of the VarLocalComparison class
+    /// </summary>
+	Public Static Class VarLocalComparison
     
-        Public Static Method NullAbfrage() As Void
+        /// <summary>
+        /// Comparing an object with Null
+        /// </summary>
+        Public Static Method NullQuery() As Void
             Local ta := DataTable{} As DataTable
             ta:Columns:Add(DataColumn{"Id", typeof(int)})
             ta:Columns:Add(DataColumn{"Name", typeof(string)})

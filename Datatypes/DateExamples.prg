@@ -1,4 +1,6 @@
-﻿// File: DateExamples.prg
+﻿// ============================================================================
+// File: DateExamples.prg
+// ============================================================================
 
 #define lCore
 
@@ -6,12 +8,15 @@ Using System
 
 Begin Namespace XKompendium
 
+    /// <summary>
+    /// The definition of the DateExamples class
+    /// </summary>
     Public Static Class DateExamples
 
-        // Differenz zweier Date-Werte
-        // Kann in Core nicht kompiliert werden wegen Date
+        // Diff between two Date values
+        // Not available in Core because of the Date type
         #ifndef lCore
-        Static Method Beispiel1() As Void
+        Static Method DateExample1() As Void
             // Local d1 := CTod("25.10.1962") As Date
             Local d1 := CTod("01.12.2018") As Date
             Local d2 := Today() As Date
@@ -25,6 +30,9 @@ Begin Namespace XKompendium
             Return
         #endif
 
+        /// <summary>
+        /// Querying NullDate()
+        /// </summary>
         Public Static Method NullDate1() As Void
             Local d1 := __Date.NullDate() As Date
             ? d1

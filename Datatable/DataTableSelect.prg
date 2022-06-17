@@ -16,7 +16,7 @@ Begin Namespace XKompendium
 	Class DataTableExamples2
     
         /// <summary>
-        /// filter rows with the select method
+        /// Filter rows with the select method
         /// ID: XS_DataTable01
         /// </summary>
         Public Static Method TableSelectExample1() As Void
@@ -44,7 +44,7 @@ Begin Namespace XKompendium
         End Method
 
         /// <summary>
-        /// filter rows with the select method
+        /// Filter rows with the select method
         /// ID: XS_DataTable01
         /// </summary>
         Public Static Method TableSelectExample2() As Void
@@ -70,7 +70,7 @@ Begin Namespace XKompendium
         End Method
 
         /// <summary>
-        /// Processing the select result
+        /// Return the select result - row[1] or Null
         /// </summary>
         Public Static Method DataTableFilter(Ta As DataTable, Filter As String) As DataRow
             Local rows := ta:Select(Filter) As DataRow[]
