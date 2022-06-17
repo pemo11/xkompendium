@@ -1,5 +1,6 @@
-﻿// File: LINQGroupExamples.prg
-
+﻿// ============================================================================
+// file: LINQGroupExamples.prg
+// ============================================================================
 
 Using System
 Using System.Data
@@ -7,9 +8,14 @@ Using System.Linq
 
 Begin Namespace XKompendium
 
+    /// <summary>
+    /// Definition of the LINQGroupExamples class
+    /// </summary>
     Public Static Class LINQGroupExamples
         
-        // Gruppieren einer DataTable
+        /// <summary>
+        /// Grouping of a DataTable
+        /// </summary>
         Static Method DataTableGroup() As Void
             Local ta := DataTable{"Test"} As DataTable
             ta:Columns:Add(DataColumn{"Id",typeof(Int32)})
@@ -32,18 +38,18 @@ Begin Namespace XKompendium
             row["GebJahr"] := 1950
             ta:Rows:Add(row)
             
-            // Setzt Verweis auf DataSet.Extensions voraus:(
-            var gebJahrGroup1 := ta:AsEnumerable():GroupBy({r => r["GebJahr"]}):ToList()
-            foreach var group in gebJahrGroup1
-                ? "Alle Autoren des Jahrgangs " + group:key:ToString()
-                foreach var autor in group
+            // Requires reference to the DataSet.Extensions assembly
+            Var gebJahrGroup1 := ta:AsEnumerable():GroupBy({r => r["GebJahr"]}):ToList()
+            Foreach Var group In gebJahrGroup1
+                ? "Alle Autoren des Jahrgangs " + Group:key:ToString()
+                Foreach Var autor In Group
                     ? autor["Autor"]:ToString()
-                next
-            next
+                Next
+            Next
 
-            // Genial dank Anonymous Types
-            var gebJahrGroup2 := ta:AsEnumerable():GroupBy({r => r["GebJahr"]}):Select({g => Class {Jahr:=g:Key:ToString(),Autoren:=g}}):ToList()
-            foreach var autorenGruppe in gebJahrGroup2
+            // Very simple thanks to anonymous types
+            Var gebJahrGroup2 := ta:AsEnumerable():GroupBy({r => r["GebJahr"]}):Select({g => Class {Jahr:=g:Key:ToString(),Autoren:=g}}):ToList()
+            Foreach Var autorenGruppe In gebJahrGroup2
                 ? "Alle Autoren des Jahrgangs " + autorenGruppe:Jahr
                 foreach var autor in autorenGruppe:Autoren
                    ? autor["Autor"]:ToString()

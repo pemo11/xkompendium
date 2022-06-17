@@ -1,15 +1,23 @@
-﻿// File: LINQDataColumn.prg
+﻿// ============================================================================
+// file: LINQDataColumn.prg
+// ============================================================================
 
-USING System
-USING System.Collections.Generic
-USING System.Text
-Using System.Linq
+Using System
+Using System.Collections.Generic
 Using System.Data
+Using System.Linq
+Using System.Text
 
-BEGIN NAMESPACE XSharpAllgemein
+Begin Namespace XKompendium
 
+    /// <summary>
+    /// Definition of the LINQDataColumn class
+    /// </summary>
 	Public Static Class LINQDataColumn
     
+        /// <summary>
+        /// Sort columns of a DataTable
+        /// </summary>
         Public Static Method SortColumns1() As Void
             Local ta := DataTable{} As DataTable
             ta:Columns:Add(DataColumn{"A1",typeof(String)})
@@ -20,6 +28,9 @@ BEGIN NAMESPACE XSharpAllgemein
                  ? col:ColumnName
             Next
  
+        /// <summary>
+        /// Sort columns of a DataTable
+        /// </summary>
         Public Static Method SortColumns2() As Void
             Local ta := DataTable{} As DataTable
             ta:Columns:Add(DataColumn{"A1",typeof(String)})
@@ -33,5 +44,7 @@ BEGIN NAMESPACE XSharpAllgemein
             // Next
 
 
-	END CLASS
-END NAMESPACE // XSharpAllgemein
+    End Class
+
+End Namespace
+

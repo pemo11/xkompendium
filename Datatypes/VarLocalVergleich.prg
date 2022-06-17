@@ -6,8 +6,8 @@
 
 Using System
 Using System.Collections.Generic
-Using System.Text
 Using System.Data
+Using System.Text
 
 Begin Namespace XKompendium
 
@@ -15,7 +15,7 @@ Begin Namespace XKompendium
     /// The definition of the VarLocalComparison class
     /// </summary>
 	Public Static Class VarLocalComparison
-    
+
         /// <summary>
         /// Comparing an object with Null
         /// </summary>
@@ -38,7 +38,7 @@ Begin Namespace XKompendium
             // Vergleich 2
             Local r2 := ta:Select("Id = 2000") As DataRow[]
             ? r2 == Null
-            
+
             // Kann in Core nicht kompiliert werden wegen Usual
             #ifndef lCore
             Local rValue1 := ta:Select("Id=1001")[1]["Name"] As Usual
@@ -52,8 +52,8 @@ Begin Namespace XKompendium
             ? rValue3 Is DBNull
 
             return
-    
-    
+
+
     End Class
- 
+
 End Namespace

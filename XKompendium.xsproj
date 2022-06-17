@@ -96,6 +96,7 @@
     <Compile Include="Classes\CityInfo.prg" />
     <Compile Include="Classes\Control.prg" />
     <Compile Include="Classes\Document.prg" />
+    <Compile Include="Classes\Number.prg" />
     <Compile Include="ControlStructures\Exceptions.prg" />
     <Compile Include="ControlStructures\ForEachExamples.prg" />
     <Compile Include="ControlStructures\Loops.prg" />
@@ -114,7 +115,7 @@
     <Compile Include="FileSystem\FileExamples.prg" />
     <Compile Include="FileSystem\DirectoryMove.prg" />
     <Compile Include="GenericLists\DictionaryExamples.prg" />
-    <Compile Include="Lambdas\AnonymousMethods.prg" />
+    <Compile Include="Lambdas\TimeEvents.prg" />
     <Compile Include="LINQ\LINQGroupExamples.prg" />
     <Compile Include="LINQ\LinqExamples.prg" />
     <Compile Include="LINQ\LINQDataColumn.prg" />
