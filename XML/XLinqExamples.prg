@@ -1,4 +1,6 @@
-﻿// File: XLinqExamples.prg
+﻿// ============================================================================
+// File: XLinqExamples.prg
+// ============================================================================
 
 Using System
 Using System.Collections.Generic
@@ -7,7 +9,10 @@ Using System.Xml.Linq
 
 Begin Namespace XKompendium
 
-	Static Class XLinqExamples
+    /// <summary>
+    /// XLinqExamples class
+    /// </summary>
+	Static Class XKompendium
         
         Static Private Method GetXDoc() As XDocument
             Local xmlText := "" As String
@@ -24,32 +29,40 @@ Begin Namespace XKompendium
             xmlText += "</books>"
             return XDocument.Parse(xmlText)
             
+        /// <summary>
+        /// Get all author elements as decendants
+        /// </summary>
         Static Method XDocBeispiel1() As Void
             Local xDoc := GetXDoc() As XDocument
             // Ausgabe aller Autoren
-            var autoren := xDoc:Descendants("author")
-            foreach autor As XElement in autoren
+            Var autoren := xDoc:Descendants("author")
+            Foreach autor As XElement In autoren
                 ? autor:Value
-            next
+            Next
             
             Return
 
+        /// <summary>
+        /// Add an author element with Attributes
+        /// </summary>
         Static Method XDocBeispiel2() As Void
             Local xDoc := GetXDoc() As XDocument
             // Anhängen eines Knoten
             Local xBook := XElement{"book", XAttribute{"id","1003"}, XAttribute{"pubYear", "2000"},;
-             XElement{"author", "Susi"}, XElement{"title", "X# - ein Satz mit X"}} As XElement
+             XElement{"author", "Susi"}, XElement{"title", "X# - a sentence with a X"}} As XElement
             xDoc:Element("books"):Add(xBook)
             ? xDoc:ToString()
             
             Return
-            
+
+        /// <summary>
+        /// Update a book node
+        /// </summary>
         Static Method XDocBeispiel3() As Void
             Local xDoc := GetXDoc() As XDocument
-            // Aktualisieren eines Knoten
-            Local xb := Null As XElement
-            Local xBook := (from book in xDoc:Descendants("book") where book:Attribute("id"):Value == "1001" select book):SingleOrDefault() As XElement
-            if xBook != Null
+            // Locate the book element
+            Local xBook := (From book In xDoc:Descendants("book") Where book:Attribute("id"):Value == "1001" Select book):SingleOrDefault() As XElement
+            If xBook != Null
                 xBook:Attribute("pubYear"):Value := "2021"
                 ? xDoc:ToString()
             Else
@@ -58,28 +71,37 @@ Begin Namespace XKompendium
             
             Return
         
+        /// <summary>
+        /// Find a book element by its id
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <param name="XDoc"></param>
+        /// <returns></returns>
         Static Private Method FindBook(Id As String, XDoc As XDocument) As XElement
             Local xBook As XElement
-            xBook := (from book in xDoc:Descendants("book") where book:Attribute("id"):Value == Id select book):SingleOrDefault()
+            xBook := (From book In xDoc:Descendants("book") Where book:Attribute("id"):Value == Id Select book):SingleOrDefault()
             Return xBook
-        
+
+        /// <summary>
+        /// Update a book node
+        /// </summary>
         Static Method XDocBeispiel4() As Void
             Local xDoc := GetXDoc() As XDocument
-            // Aktualisieren eines Knoten
+            // Find the book node first
             Local xBook := FindBook("1002", xDoc) As XElement
-            if xBook != Null
+            If xBook != Null
                 xBook:Attribute("pubYear"):Value := "2021"
             Else
-                Local xBookNeu := XElement{"book", XAttribute{"id","1002"}, XAttribute{"pubYear","2020"},;
-                 XElement{"author","susi"}, XElement{"title","X# - ein ganz dreister Bluff"}} As XElement
-                xDoc:Element("books"):Add(xBookNeu)
-            EndIf
+                Local xBookNew := XElement{"book", XAttribute{"id","1002"}, XAttribute{"pubYear","2020"},;
+                 XElement{"author","susi"}, XElement{"title","X# - a sensational language"}} As XElement
+                xDoc:Element("books"):Add(xBookNew)
+            Endif
             ? xDoc:ToString()
             xBook := FindBook("1002", xDoc)
             xBook:Attribute("pubYear"):Value := "2021"
             ? xDoc:ToString()
             Return
 
-End Class
+    End Class
 
 End Namespace

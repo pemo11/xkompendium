@@ -1,4 +1,6 @@
-﻿// File: NullExamples.prg
+﻿// ============================================================================
+// File: NullExamples.prg
+// ============================================================================
 
 Using System
 Using System.Collections.Generic
@@ -13,7 +15,7 @@ Begin Namespace XKompendium
         Static Method DateTimeNullQuery() As Void
             Local d As DateTime?
             d := Null
-            ? "Hat Wert: " + d:HasValue:ToString()
+            ? "The value: " + d:HasValue:ToString()
             Return 
          
         /// <summary>

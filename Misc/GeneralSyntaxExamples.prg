@@ -1,4 +1,6 @@
-﻿// File: GeneralSyntaxExamples.prg
+﻿// ============================================================================
+// file: GeneralSyntaxExamples.prg
+// ============================================================================
 
 Using System
 
@@ -6,22 +8,28 @@ Begin Namespace XKompendium
 
 	Static Class GeneralSyntax
 
-        Static Method IfVarBeispiel() As Void
+        /// <summary>
+        /// Operation and comparison in one expression
+        /// </summary>
+        Static Method IfVarExample() As Void
             Local v1 := 1 As Int
             Local v2 := 0 As Int
             
-            if (v2 := v1 * 10) == 10
+            If (v2 := v1 * 10) == 10
                 ? "Stimmt..."
-            else
+            Else
                 ? "Stimmt nicht..."
-            endif
+            Endif
             
             Return
         
+        /// <summary>
+        /// IIf as an alternative to a ternary operator
+        /// </summary>
         Static Method TernaryOp() As Void
             Local v1 As Int
-            Local w1 := "Sonntag" As String
-            v1 := iif(w1 == "Sonntag", 1, -1)
+            Local w1 := "Sunday" As String
+            v1 := iif(w1 == "Sunday", 1, -1)
             ? v1
             Return
             

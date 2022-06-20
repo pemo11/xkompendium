@@ -101,8 +101,10 @@
     <Compile Include="ControlStructures\ForEachExamples.prg" />
     <Compile Include="ControlStructures\Loops.prg" />
     <Compile Include="ControlStructures\ScopeExamples.prg" />
+    <Compile Include="ControlStructures\Switch.prg" />
     <Compile Include="Database\DBServer.prg" />
     <Compile Include="Database\OracleTest.prg" />
+    <Compile Include="Datatable\DataTableColumsSort.prg" />
     <Compile Include="Datatable\DataTableExamples.prg" />
     <Compile Include="Datatable\DataTableLinq.prg" />
     <Compile Include="Datatable\DataTableSelect.prg" />
@@ -120,11 +122,9 @@
     <Compile Include="LINQ\LinqExamples.prg" />
     <Compile Include="LINQ\LINQDataColumn.prg" />
     <Compile Include="Misc\GeneralSyntaxExamples.prg" />
-    <Compile Include="Misc\MonatePerEnumRange.prg" />
     <Compile Include="Misc\NamedArguments.prg" />
     <Compile Include="Misc\NetVersion.prg" />
     <Compile Include="Misc\WordAuto.prg" />
-    <Compile Include="Misc\XLinqExamples.prg" />
     <Compile Include="Nullalble\NullExamples.prg" />
     <Compile Include="OOP\ConstructorChaining.prg" />
     <Compile Include="OOP\EventExamples.prg" />
