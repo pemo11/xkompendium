@@ -1,6 +1,6 @@
 ﻿# The little X# programming guide (by Peter Monadjemi)
 
-## List of the examples
+## List of X# examples
 
 Nr | Title | What to learn? | Last Update
 --- | --- | --- | ---
