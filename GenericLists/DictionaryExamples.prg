@@ -29,9 +29,21 @@ Begin Namespace XKompendium
             Next
 
         /// <summary>
-        /// Example for using a Dictionary<T,S> with initialization
+        /// Example for using a Dictionary<T,S> with simple adding of key,value pairs
         /// </summary>
         Public Static Method DictionaryExample2() As Void
+            Local dicCities := Dictionary<String, CityInfo>{} As Dictionary<String, CityInfo>
+            dicCities["ES"] := CityInfo{"Esslingen", 89000}
+            dicCities["PO"] := CityInfo{"Plochingen", 34000}
+            dicCities["GP"] := CityInfo{"Göppingen", 45000}
+            Foreach k As String In dicCities:Keys
+                ? dicCities[k]:ToString()
+            Next
+
+        /// <summary>
+        /// Example for using a Dictionary<T,S> with initialization
+        /// </summary>
+        Public Static Method DictionaryExample3() As Void
             Local dicCities := Dictionary<String, CityInfo>{}  {;
              {"ES", CityInfo{"Esslingen", 89000}},;
              {"PO", CityInfo{"Plochingen", 34000}},;

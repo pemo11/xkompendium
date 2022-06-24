@@ -3,7 +3,7 @@
 // ============================================================================
 
 Using System
-Using System.Timers
+Using Sys = System.Timers
 
 Begin Namespace XKompendium
 
@@ -11,7 +11,7 @@ Begin Namespace XKompendium
     /// Definition of the AnonymousMethods class
     /// </summary>
 	Static Class TimerEvents
-        Static Private tmr As Timer
+        Static Private tmr As Sys.Timer
         Static Private Counter := 0 As Int32
 
         /// <summary>
@@ -31,9 +31,9 @@ Begin Namespace XKompendium
         /// </summary>
         Static Method Example1() As Void
             Counter := 0
-            tmr := Timer{}
+            tmr := Sys.Timer{}
             tmr:interval := 1000
-            tmr:Elapsed += ElapsedEventHandler{timerEvent}
+            tmr:Elapsed += Sys.ElapsedEventHandler{timerEvent}
             tmr:Start()
             ? "*** Start ***"
             Return
@@ -43,9 +43,9 @@ Begin Namespace XKompendium
         /// </summary>
         Static Method Example2() As Void
             Counter := 0
-            tmr := Timer{}
+            tmr := Sys.Timer{}
             tmr:interval := 1000
-            tmr:Elapsed += Delegate(Sender As Object, e As ElapsedEventArgs) {
+            tmr:Elapsed += Delegate(Sender As Object, e As Sys.ElapsedEventArgs) {
                 ? "*** Timer-Event ***"
                 Counter++
                 If Counter == 5
@@ -63,7 +63,7 @@ Begin Namespace XKompendium
         /// </summary>
        Static Method Example3() As Void
             Counter := 0
-            tmr := Timer{}
+            tmr := Sys.Timer{}
             tmr:interval := 1000
             tmr:Elapsed += {Sender, e =>
                 ? "*** Timer-Event ***"

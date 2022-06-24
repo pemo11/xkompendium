@@ -7,12 +7,13 @@ Using System.Linq
 Using System.Text
 
 Begin Namespace XKompendium
-   
+
     [STAThread];
     Function Start() As Void Strict
         Console.ForegroundColor := ConsoleColor.Green
         // NullExamples.NullCompare4()
-        ArrayExamples1.NetArray()
+        // ArrayExamples1.NetArray()
+        TypeExamples1.TypeExample4()
         Console.WriteLine()
         Console.WriteLine("Fertig...")
         Console.ReadKey()
