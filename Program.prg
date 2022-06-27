@@ -13,7 +13,8 @@ Begin Namespace XKompendium
         Console.ForegroundColor := ConsoleColor.Green
         // NullExamples.NullCompare4()
         // ArrayExamples1.NetArray()
-        TypeExamples1.TypeExample4()
+        // TypeExamples1.TypeExample4()
+        Array2DExamples1.Array2DExample1()
         Console.WriteLine()
         Console.WriteLine("Fertig...")
         Console.ReadKey()

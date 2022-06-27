@@ -99,6 +99,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arrays\Array2D.prg" />
     <Compile Include="Arrays\ArrayExamples1.prg" />
     <Compile Include="Arrays\ArrayExamples2.prg" />
     <Compile Include="Arrays\AScanExamples.prg" />
